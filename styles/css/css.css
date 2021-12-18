@@ -1,0 +1,200 @@
+/************************************ CSS de BASE *******************************/
+* {
+	box-sizing : border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    width: 100%;
+}
+body {
+    scroll-behavior: smooth;
+    line-height: 1.15;
+	margin : 0;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 1.2em;
+}
+h1, h2 {
+    margin: 0;
+    padding: 0.5em;
+    font-family: 'Crafty Girls';
+    font-size: 1.8em;
+    text-align: center;
+}
+a {
+	text-decoration : none;
+	font-weight : bold;
+    color: #aa4400;
+    padding: 1em;
+}
+p {
+    padding: 1em;
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    /* box-shadow: 2.5px 2.5px 10px 2.5px rgba(0,0,0,50%); */
+}
+main {
+	margin : 0;	
+    background-repeat: no-repeat; 
+}
+section {
+    padding: 1em;
+}
+.form {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 3em;
+    padding : 2em;  
+    font-weight: bolder;
+}
+.form input{
+    width: 100%;
+    margin: 1em;
+    background-color: inherit;
+}
+#button {
+    width: 50%;
+}
+/************************************ HEADER *******************************/
+header {
+    background-image: url(../assets/svg/header.svg);
+    background-repeat: no-repeat;
+}
+nav {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+header input[type="submit"] {
+    margin-top : 2em;
+    margin-bottom : 2em;
+    font-weight: bolder;
+    background-color: inherit;
+    border-style: none;
+}
+/************************************ FOOTER *******************************/
+footer {
+    background-image: url(../assets/svg/footer.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    padding-top: 2em;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+}
+footer a {
+    padding: 1em 2em;
+}
+
+/************************************ PAGE D'ACCUEIL *******************************/
+.main-accueil {
+    display: flex;
+}
+.main-accueil section {
+    width: 50%;
+    padding: 7em;
+}
+.main-accueil div {
+    width: 50%;
+    background-image: url(../assets/svg/blob.svg);
+    background-repeat: no-repeat; 
+}
+.description-accueil {
+    background-image: url(../assets/svg/description-accueil.svg);
+    background-repeat: no-repeat; 
+}
+/************************************ PAGE D'INSCRIPTION *******************************/
+.body-inscription {
+    background-image: url(../assets/svg/body-inscription.svg);
+    background-position: center;
+    background-size: 40%;
+    min-height: 90vh;
+}
+/************************************ PAGE DE CONNEXION *******************************/
+.body-connexion {
+    background-image: url(../assets/svg/body-connexion.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/************************************ PAGE PROFIL *******************************/
+.body-profil {
+    background-image: url(../assets/svg/body-profil.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/************************************ PAGE LIVRE D'OR *******************************/
+.body-livreor {
+    background-image: url(../assets/svg/body-livreor.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body-livreor main {
+    width: 100%;
+    min-height: 100%;
+}
+.section-livredor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.section-livredor h1 {
+    flex-basis: 100%;
+}
+.com {
+    background-color: blanchedalmond;
+    width: 25vw;
+    margin: 1em;
+    border: 1px solid white;
+}
+/************************************ PAGE COMMENTAIRE *******************************/
+.body-com {
+    background-image: url(../assets/svg/body-com.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form-commentaire textarea, .form-commentaire label {
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    background-color: inherit;
+}
+
+/*============================================== TABLEAU ========================================*/
+table {
+    border-collapse: collapse; 
+    margin: auto;
+    background-color: white;
+}
+th, td {
+    border : 2px solid #1d1801;
+    border-collapse: collapse; 
+    text-align: center;
+}
+ td {
+    padding: 0.7em 1em;
+}
+thead th {
+    width: 2em;
+    background-color: #131413;
+    color: white;
+    padding: 1em 0;
+}
+thead td {
+    background-color: #131413;
+    color: white;
+}
+tbody th {
+    font-family: cursive;
+    padding: 1em;
+    background-color: #131413;
+    color: white;
+}
+tbody td {
+    /* font-size: 1.3em; */
+}
