@@ -1,3 +1,4 @@
+/*============================================== VERSION MOBILE ========================================*/
 /************************************ CSS de BASE *******************************/
 * {
 	box-sizing : border-box;
@@ -11,29 +12,28 @@ body {
     scroll-behavior: smooth;
     line-height: 1.15;
 	margin : 0;
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Roboto', sans-serif;    
     font-size: 1.2em;
+    background-color: #f2f0ed;
 }
 h1, h2 {
     margin: 0;
     padding: 0.5em;
-    font-family: 'Crafty Girls';
-    font-size: 1.8em;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2em;
     text-align: center;
+    color: #496477;
 }
 a {
 	text-decoration : none;
 	font-weight : bold;
-    color: #aa4400;
-    padding: 1em;
+    color: black;
 }
 p {
     padding: 1em;
-    margin: 0;
 }
 img {
     max-width: 100%;
-    /* box-shadow: 2.5px 2.5px 10px 2.5px rgba(0,0,0,50%); */
 }
 main {
 	margin : 0;	
@@ -43,158 +43,445 @@ section {
     padding: 1em;
 }
 .form {
-    width: 40%;
+    width: 80%;
     margin: auto;
     margin-bottom: 3em;
     padding : 2em;  
     font-weight: bolder;
+    text-align: center;
+    background-color: white;
 }
-.form input{
+.form input {
     width: 100%;
-    margin: 1em;
-    background-color: inherit;
+    margin: 2em auto;
+    border-top: black;
+    border-left: transparent;
+    border-right: transparent;
 }
-#button {
+.form input[type="submit"] {
     width: 50%;
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: inherit;
+    border: 2px solid black;
+    padding: 0.5rem;   
+    border-radius: 25px; 
+}
+.form p {
+    padding: 0.5rem;
+    color:tomato;
 }
 /************************************ HEADER *******************************/
 header {
-    background-image: url(../assets/svg/header.svg);
+    position : relative;
+    height: 100vh;
+    background-image: url(../../assets/img/reunion-accueil.jpeg);
     background-repeat: no-repeat;
+    background-size: cover;
+}
+/* LOGO */
+.logo {
+    display: block;
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    width: 40%;
+    padding: 1rem;
+    color: ivory;
+}
+.logo span:nth-child(1) {
+    display: block;
+    font-size: 3rem;
+    text-align: center;
+}
+.logo span:nth-child(2) {
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+}
+/* Menu BURGER */
+.menu-burger {
+    z-index: 10;
+    position: absolute;
+    top : 2em;
+    right : 3em;
+}
+.menu-burger span {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 7px;
+    background-color : whitesmoke;
+    border-radius: 25px;
+}
+.menu-burger :nth-child(1) {
+    transform: translateY(10px);
+}
+.menu-burger :nth-child(2) {
+    transform: translateY(-10px);
+}
+#burger[type="checkbox"]:checked ~ .menu-burger :nth-child(1) {
+    transform: rotate(45deg);
+}
+#burger[type="checkbox"]:checked ~ .menu-burger :nth-child(2) {
+    transform: rotate(-45deg);
+}
+#burger[type="checkbox"]:checked ~ .menu-burger :nth-child(3) {
+    display: none;
+}
+.menu-burger :nth-child(1), .menu-burger :nth-child(2) {
+    transition: all 330ms;
+}
+#burger[type="checkbox"]:checked ~ nav {
+    height: 100vh;
 }
 nav {
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 100%;
-    padding: 1em;
+    height: 0;
+    overflow : hidden;
+    transition: all 330ms ease-in-out;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    background-color: rgba(131, 130, 130, 0.9);
 }
+nav a {
+    color: ivory;
+    padding: 1em;
+}
+/* Bouton déconnection */
 header input[type="submit"] {
     margin-top : 2em;
     margin-bottom : 2em;
     font-weight: bolder;
+    color: ivory;
     background-color: inherit;
     border-style: none;
 }
+/* Message pour les visiteurs connectés */
+.msg-connect {
+    text-align: end;
+    color: ivory;
+
+}
+.msg-connect span {
+    text-transform: uppercase;
+    color: rgb(65, 94, 112);
+    font-weight: bold;
+}
+.sect-header {
+    margin: auto;
+    margin-top: 4rem;
+    padding: 1rem;
+    background-color: rgb(65, 94, 112, 80%);
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 1px 0px 15px 5px rgba(0,0,0,0); 
+    color: ivory;
+}
+.sect-header p:first-child {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 /************************************ FOOTER *******************************/
 footer {
-    background-image: url(../assets/svg/footer.svg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    height: 50vh;
-    width: 100%;
-    padding-top: 2em;
     display: flex;
-    justify-content:center;
-    align-items: flex-end;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(150, 172, 185, 0.9), rgba(150, 172, 185, 0.8)),url(../../assets/img/reunion-accueil.jpeg);
+    background-attachment: fixed;
+    color: ivory;
+    padding-top: 1em;
+}
+footer p:first-child {
+    text-align: justify;
+    width: 80%;
+    margin: auto;
+}
+footer div {
+    display: flex;
+    flex-direction: column;
 }
 footer a {
-    padding: 1em 2em;
+    padding: 0.5rem;
+    text-align: center;
+    color: ivory;
+}
+footer p:last-child {
+    background-color: rgba(121, 139, 150, 0.8);
+    text-align: center;
 }
 
 /************************************ PAGE D'ACCUEIL *******************************/
-.main-accueil {
-    display: flex;
-}
-.main-accueil section {
-    width: 50%;
-    padding: 7em;
-}
-.main-accueil div {
-    width: 50%;
-    background-image: url(../assets/svg/blob.svg);
-    background-repeat: no-repeat; 
-}
 .description-accueil {
-    background-image: url(../assets/svg/description-accueil.svg);
-    background-repeat: no-repeat; 
-}
-/************************************ PAGE D'INSCRIPTION *******************************/
-.body-inscription {
-    background-image: url(../assets/svg/body-inscription.svg);
-    background-position: center;
-    background-size: 40%;
-    min-height: 90vh;
-}
-/************************************ PAGE DE CONNEXION *******************************/
-.body-connexion {
-    background-image: url(../assets/svg/body-connexion.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/************************************ PAGE PROFIL *******************************/
-.body-profil {
-    background-image: url(../assets/svg/body-profil.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/************************************ PAGE LIVRE D'OR *******************************/
-.body-livreor {
-    background-image: url(../assets/svg/body-livreor.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.body-livreor main {
-    width: 100%;
-    min-height: 100%;
-}
-.section-livredor {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content:center;
-}
-.section-livredor h1 {
-    flex-basis: 100%;
-}
-.com {
-    background-color: blanchedalmond;
-    width: 25vw;
-    margin: 1em;
-    border: 1px solid white;
-}
-/************************************ PAGE COMMENTAIRE *******************************/
-.body-com {
-    background-image: url(../assets/svg/body-com.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.form-commentaire textarea, .form-commentaire label {
-    width: 90%;
     margin: auto;
-    padding: 1em;
-    background-color: inherit;
+}
+.description-accueil img {
+    display: block;
+    width: 90vw;
+    margin: 2rem auto;
+}
+.description-accueil figcaption {
+    font-weight: bolder;
+    background-color: rgb(65, 94, 112);
+    padding: 1rem;
+}
+.description-accueil h2 {
+    color: ivory;
 }
 
-/*============================================== TABLEAU ========================================*/
-table {
-    border-collapse: collapse; 
-    margin: auto;
-    background-color: white;
-}
-th, td {
-    border : 2px solid #1d1801;
-    border-collapse: collapse; 
+/************************************ PAGE D'INSCRIPTION *******************************/
+.section-inscription {
     text-align: center;
 }
- td {
-    padding: 0.7em 1em;
+.section-inscription img {
+    width: 60vw;
+    margin: 3rem;
+}
+ 
+/************************************ PAGE DE CONNEXION *******************************/
+.section-connexion {
+    text-align: center;
+}
+.section-connexion img {
+    width: 60vw;
+    margin: 3rem;
+}
+
+/************************************ PAGE DE PROFIL *******************************/
+.section-profil div {
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgb(65, 94, 112, 80%);
+    text-align: center;
+}
+.section-profil img {
+    width: 40%;
+    margin: 2rem auto;
+    border-radius: 50%;
+}
+/*============================================== PAGE PLANNING ========================================*/
+.section-planning {
+    padding: 0;
+    margin: 2rem auto;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse; 
+    background-color: white;
+    font-size: 0.5rem;
+    word-break: break-word;
+}
+th, td {
+    border: 2px solid rgb(65, 94, 112);
+    border-collapse: collapse; 
+    text-align: center;
+    padding: 5px;
 }
 thead th {
-    width: 2em;
-    background-color: #131413;
-    color: white;
-    padding: 1em 0;
-}
-thead td {
-    background-color: #131413;
+    background-color: rgb(65, 94, 112, 80%);
     color: white;
 }
-tbody th {
-    font-family: cursive;
-    padding: 1em;
-    background-color: #131413;
-    color: white;
+thead th:nth-child(1), thead th:nth-child(7), thead th:nth-child(8) {
+    width: 5vw;
 }
-tbody td {
-    /* font-size: 1.3em; */
+
+td:nth-child(1) {
+    background-color: rgb(65, 94, 112, 80%);
+    color: ivory;
+}
+td:nth-child(7), td:nth-child(8) {
+    background: linear-gradient(45deg, #00f 1%, #fff 1%, #fff 49%, #00f 49%, #00f 51%, #fff 51%, #fff 99%, #00f 99%);
+    background-size: 6px 6px;
+    background-position: 50px 50px;
+}
+.lien-reserv {
+    background-color: rgb(179, 243, 240);
+}
+/************************************ PAGE RESERVATION FORM *******************************/
+.section-reservation p:first-of-type {
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgb(65, 94, 112, 80%);
+}
+.section-reservation textarea {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+/************************************ PAGE RESERVATION *******************************/
+.sect-reserv div {
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: ivory;
+    text-align: center;
+    font-weight: bolder;
+    clip-path: polygon(3% 0, 7% 1%, 11% 0%, 16% 2%, 20% 0, 23% 2%, 28% 2%, 32% 1%, 35% 1%, 39% 3%, 41% 1%, 45% 0%, 47% 2%, 50% 2%, 53% 0, 58% 2%, 60% 2%, 63% 1%, 65% 0%, 67% 2%, 69% 2%, 73% 1%, 76% 1%, 79% 0, 82% 1%, 85% 0, 87% 1%, 89% 0, 92% 1%, 96% 0, 98% 3%, 99% 3%, 99% 6%, 100% 11%, 98% 15%, 100% 21%, 99% 28%, 100% 32%, 99% 35%, 99% 40%, 100% 43%, 99% 48%, 100% 53%, 100% 57%, 99% 60%, 100% 64%, 100% 68%, 99% 72%, 100% 75%, 100% 79%, 99% 83%, 100% 86%, 100% 90%, 99% 94%, 99% 98%, 95% 99%, 92% 99%, 89% 100%, 86% 99%, 83% 100%, 77% 99%, 72% 100%, 66% 98%, 62% 100%, 59% 99%, 54% 99%, 49% 100%, 46% 98%, 43% 100%, 40% 98%, 38% 100%, 35% 99%, 31% 100%, 28% 99%, 25% 99%, 22% 100%, 19% 99%, 16% 100%, 13% 99%, 10% 99%, 7% 100%, 4% 99%, 2% 97%, 1% 97%, 0% 94%, 1% 89%, 0% 84%, 1% 81%, 0 76%, 0 71%, 1% 66%, 0% 64%, 0% 61%, 0% 59%, 1% 54%, 0% 49%, 1% 45%, 0% 40%, 1% 37%, 0% 34%, 1% 29%, 0% 23%, 2% 20%, 1% 17%, 1% 13%, 0 10%, 1% 6%, 1% 3%);
+} 
+.sect-reserv p {
+    padding: 0.5rem;
+}   
+.sect-reserv span {
+    color: rgb(65, 94, 112, 80%);
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+/*============================================== VERSION DESKTOP ========================================*/
+@media screen and (min-width: 1024px){
+    .form {
+        width: 40%;
+    }
+/************************************ HEADER *******************************/
+    .logo {
+        width: 20%;
+    }
+    .menu-burger {
+        display: none;
+    }
+    nav {
+        height: 10vh;
+        background-color: inherit;
+        flex-direction: row;
+    }
+    .sect-header {
+        width: 60%;
+    }
+
+/************************************ FOOTER *******************************/
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    footer p:first-child {
+        width: 50%;
+        padding: 4rem 2rem;
+    }
+    footer div {
+        flex-basis: 50%; 
+    }
+    footer p:last-child {
+    flex-basis: 100%;    
+    }
+
+/************************************ PAGE D'ACCUEIL *******************************/
+    .description-accueil p:first-of-type {
+        width: 70%;
+        margin: auto;        
+    }
+    .description-accueil img {
+        width: 50vw;
+        margin: 3rem 2rem;
+    }
+    .description-accueil figure {
+        position: relative;
+        padding-left: 4rem;
+    }
+    .description-accueil figcaption {
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        width: 40%;
+        padding: 3rem;
+    }
+
+/************************************ PAGE D'INSCRIPTION *******************************/
+    .section-inscription {
+        position: relative;
+    }
+    .section-inscription img {
+        width: 65vw;
+        margin: 3rem;
+    }
+    .section-inscription form {
+        position: absolute;
+        top: 6rem; 
+        left: 3rem;
+    }
+
+/************************************ PAGE DE CONNEXION *******************************/
+    .section-connexion {
+        position: relative;
+    }
+    .section-connexion form {
+        position: absolute;
+        top: 8rem; 
+        right: 6rem;
+    }
+
+/************************************ PAGE DE PROFIL *******************************/
+    .section-profil {
+        position: relative;
+        min-height: 50vh;
+    } 
+    .section-profil div {
+        margin-bottom: 6rem;
+        padding-left: 5rem;
+        text-align: left;
+    }
+    .section-profil img {
+        width: 15%;
+        border-radius: 50%;
+    }
+    .section-profil form {
+        position: absolute;
+        top: 2rem;
+        right: 20rem;
+    }
+
+/*============================================== PAGE PLANNING ========================================*/
+    .section-planning {
+        padding: 1rem;
+    }
+    table {
+        font-size: 1rem;
+    }
+    thead th:nth-child(7), thead th:nth-child(8) {
+        width: 7vw;
+    }
+
+/************************************ PAGE RESERVATION FORM *******************************/
+    .section-reservation {
+        position: relative;
+    }
+    .section-reservation p:first-of-type {
+        width: 90%;
+        margin: 10rem auto;
+        padding: 8rem 45rem 8rem 5rem;
+        background-color: rgb(65, 94, 112, 80%);
+        color: ivory;
+        font-size: 1.5rem;
+    }
+    .section-reservation form {
+        position: absolute;
+        top: 2rem;
+        right: 11rem;
+        padding-top : 0.5em; 
+        padding-bottom : 0.5em;   
+    }
+    .section-reservation form input {
+        margin: 1em auto;
+    }
+
+/************************************ PAGE RESERVATION *******************************/
+    .sect-reserv {
+        position: relative;
+    }
+    .sect-reserv img {
+        display: block;
+        width: 70%;
+        margin: 6rem auto;
+    }
+    .sect-reserv div {
+        position: absolute;
+        left: 3rem;
+        width: 40%;
+    }
 }

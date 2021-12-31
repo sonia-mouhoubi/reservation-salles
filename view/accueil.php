@@ -12,30 +12,61 @@ session_start();
         <meta name="description" content="Création d'un site web de réservation de salles">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
         <link href="../styles/css/css.css" rel="stylesheet">
     </head>
     <body>
         <?php require ('require/header.php'); ?>         
         <main class="main-accueil">
-            <span>
             <?php 
             if(isset($_GET['msg']) && $_GET['msg']=='connectreussie') {
             ?> <p>Connexion réussie.</p> <?php
             } ?>
-            </span>
             <section class="description-accueil">
                 <h1>RESERVATION DE SALLES</h1>
                 <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
-                ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis</p>
-            </section>
-            <div>
-                <img class="chat-accueil" src="../assets/img/chat-accueil.png" alt="">
-            </div>    
+                ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
+                si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 
+                terrarum fictis vocibus exclamabant.</p>
+                <figure>
+                    <img src="../assets/img/reunion-classe.jpg" alt="">
+                    <figcaption>
+                    <h2>Salle de réunion SOPHISTIQUE</h2>
+                    Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
+                    ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
+                    si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 
+                    terrarum fictis vocibus exclamabant.</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/img/reunion-cosy.jpeg" alt="">
+                    <figcaption>
+                    <h2>Salle de réunion COSY</h2>
+                    Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
+                    ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
+                    si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 
+                    terrarum fictis vocibus exclamabant.</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/img/reunion-accueil.jpeg" alt="">
+                    <figcaption>
+                    <h2>Salle de réunion CHIC</h2>
+                    Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
+                    ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
+                    si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 
+                    terrarum fictis vocibus exclamabant.</figcaption>
+                </figure>
+                <figure>
+                    <img src="../assets/img/reunion-mer.jpg" alt=""> 
+                    <figcaption>
+                    <h2>Salle de réunion DETENTE</h2>
+                    Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
+                    ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
+                    si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 
+                    terrarum fictis vocibus exclamabant.</figcaption>
+                </figure>
+            </section>  
         </main>
         <?php require ('require/footer.php'); ?>         
     </body>

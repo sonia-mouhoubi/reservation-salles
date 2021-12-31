@@ -14,19 +14,18 @@ require ('../traitements/page-traitement/bdd.php');
         <meta name="description" content="Création d'un site web de réservation de salles">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
         <link href="../styles/css/css.css" rel="stylesheet">
     </head>
-    <body class="body-inscription"LP>
+    <body>
     <?php require ('require/header.php'); ?>         
         <main>
             <section class="section-inscription">
-                <h1>Formulaire d'inscription</h1>
+                <img src="../assets/img/inscription.jpg" alt="Image de bureau pour la page inscription">
                 <form class="form" action="../traitements/form-traitement/form-inscription.php" method="post">
+                    <h1>Inscription</h1>
                     <label for="login">Login</label>
                     <input type="text" id="login" name="login">
                     <?php 

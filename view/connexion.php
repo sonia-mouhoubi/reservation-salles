@@ -12,15 +12,14 @@ require ('../traitements/page-traitement/bdd.php');
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Connexion - Réservation de salles</title>
         <meta name="description" content="Création d'un site web de réservation de salles"><link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
         <link href="../styles/css/css.css" rel="stylesheet">
     </head>
-    <body class="body-connexion">
+    <body>
     <?php require ('require/header.php'); ?>         
         <main>
             <span>
@@ -29,9 +28,10 @@ require ('../traitements/page-traitement/bdd.php');
             ?> <p>Inscription réussie.</p> <?php
             } ?>
             </span>
-            <section>
-                <h1>Formulaire de connexion</h1>
+            <section class="section-connexion">
+            <img src="../assets/img/connexion.jpg" alt="Image de bureau pour la page connexion">
                 <form class="form" action="../traitements/form-traitement/form-connexion.php" method="post">
+                    <h1>Connexion</h1>
                     <label for="login">Login</label>
                     <input type="text" id="login" name="login">
                     <?php 
