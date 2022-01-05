@@ -3,14 +3,6 @@
 require ('../traitements/page-traitement/bdd.php'); 
 // Lien pour la page de traitement.
 require ('../traitements/page-traitement/traitement-planning.php'); 
-echo strtotime("+1 week"), "\n";
-$test = date(strtotime("now"));
-echo date('Y-m-d',$test);
-$datenow = date('N', $test);
-echo $datenow;
-// if ($datenow > 1)
-//     echo "first day is " . date('Y-m-d',(strtotime('-'. ($datenow - 1) .' days', $test)));
-// }   
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,7 +17,6 @@ echo $datenow;
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
-        
         <link href="../styles/css/css.css" rel="stylesheet">
     </head>
     <body class="body-inscription">
@@ -33,16 +24,47 @@ echo $datenow;
         <main>
             <section class="section-planning">
                 <h1>Planning</h1>
+                <?php 
+                if(isset($_GET['week'])) {
+                    $week = $_GET['week'];
+                    echo "<div class='next-prev'><a href='planning.php?week=".($week-1)."'>PREV</a>";
+                    echo "<a href='planning.php?week=".($week+1)."'>NEXT</a></div>";  
+                }
+                else {
+                    echo "<div class='next-prev'><a href='planning.php?week=-1'>PREV</a>";
+                    echo "<a href='planning.php?week=1'>NEXT</a></div>";  
+                }
+                ?>
                 <table>
                     <thead>
                         <tr> 
                             <th></th>
                         <?php 
-                        // Boucle pour récupérer les jours.
-                        foreach($jour as $key => $value) {
-                            echo "<th>".$value."</th>";
+                        if(isset($_GET['week'])){
+                            $test = new DateTime("monday $week weeks");
+                            echo "<th>Lundi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("tuesday $week weeks");
+                            echo "<th>Mardi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("wednesday $week weeks");
+                            echo "<th>Mercredi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("thursday $week weeks");
+                            echo "<th>Jeudi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("friday $week weeks");
+                            echo "<th>Vendredi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("saturday $week weeks");
+                            echo "<th>Samedi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $test = new DateTime("sunday $week weeks");
+                            echo "<th>Dimanche<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
                         }
-                        ?>     
+                        else {
+                            echo "<th>Lundi</th>";
+                            echo "<th>Mardi</th>";
+                            echo "<th>Mercredi</th>";
+                            echo "<th>Jeudi</th>";
+                            echo "<th>Vendredi</th>";
+                            echo "<th>Samedi</th>";
+                            echo "<th>Dimanche</th>";
+                        }?>     
                         </tr>
                     </thead>
                     <tbody>
@@ -71,10 +93,11 @@ echo $datenow;
 
                             // Var pour récupérer l'id de la réservation.
                                 $id_res = $value['id'];
-
+                            // Condition pour pouvoir placer un rdv
                                 if($day_debut==$c && $heure_debut==$h) {
                                     echo "<a class='lien-reserv' href='reservation.php?id=$id_res'>".$value['titre']." par ".$value['login']."</a>";
                                 }
+                            // Condition pour placer plusieus rdv 
                                 elseif ($day_debut==$c && $heure_fin>$h && $heure_debut<$h) {
                                     echo "<a class='lien-reserv' href='reservation.php?id=$id_res'>".$value['titre']." par ".$value['login']."</a>";
                                 }

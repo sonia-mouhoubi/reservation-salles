@@ -23,7 +23,7 @@ require ('../traitements/page-traitement/bdd.php');
     <?php require ('require/header.php'); ?>         
         <main>
             <section class="section-reservation">
-                <p>Les réservations se font de 8h à 19h par tranche d'une heure.
+                <p class="descr-reservation">Les réservations se font de 8h à 19h par tranche d'une heure.
                 Vous pouvez réserver plusieurs heures d'affilées.</p>
                 <p>
                 <?php 

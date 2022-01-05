@@ -268,6 +268,17 @@ footer p:last-child {
     padding: 0;
     margin: 2rem auto;
 }
+.next-prev {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.next-prev a {
+    color: rgb(65, 94, 112, 80%);
+    padding: 1rem;
+}
 table {
     table-layout: fixed;
     width: 100%;
@@ -288,9 +299,8 @@ thead th {
     color: white;
 }
 thead th:nth-child(1), thead th:nth-child(7), thead th:nth-child(8) {
-    width: 5vw;
+    width: 6vw;
 }
-
 td:nth-child(1) {
     background-color: rgb(65, 94, 112, 80%);
     color: ivory;
@@ -304,7 +314,7 @@ td:nth-child(7), td:nth-child(8) {
     background-color: rgb(179, 243, 240);
 }
 /************************************ PAGE RESERVATION FORM *******************************/
-.section-reservation p:first-of-type {
+.descr-reservation {
     width: 90%;
     margin: auto;
     padding: 2rem;
@@ -444,14 +454,14 @@ td:nth-child(7), td:nth-child(8) {
         font-size: 1rem;
     }
     thead th:nth-child(7), thead th:nth-child(8) {
-        width: 7vw;
+        width: 8vw;
     }
 
 /************************************ PAGE RESERVATION FORM *******************************/
     .section-reservation {
         position: relative;
     }
-    .section-reservation p:first-of-type {
+    .descr-reservation {
         width: 90%;
         margin: 10rem auto;
         padding: 8rem 45rem 8rem 5rem;
