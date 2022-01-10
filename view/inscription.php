@@ -25,7 +25,7 @@ require ('../traitements/page-traitement/bdd.php');
             <section class="section-inscription">
                 <img src="../assets/img/inscription.jpg" alt="Image de bureau pour la page inscription">
                 <form class="form" action="../traitements/form-traitement/form-inscription.php" method="post">
-                    <h1>Inscription</h1>
+                    <h2>Inscrivez-vous</h2>
                     <label for="login">Login</label>
                     <input type="text" id="login" name="login">
                     <?php 

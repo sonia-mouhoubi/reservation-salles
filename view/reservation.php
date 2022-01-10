@@ -24,7 +24,7 @@ require ('../traitements/page-traitement/traitement-reservation.php');
         <main>
             <section class="sect-reserv">
                 <div>
-                <h1>Réservation</h1>
+                <h2>Créneaux réservés</h2>
                 <?php 
                 foreach($res as $value) { ?>
                     <p><span>Titre : </span><?php echo $value['titre']?></p>

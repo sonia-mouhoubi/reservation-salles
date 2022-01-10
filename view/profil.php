@@ -25,7 +25,7 @@ require ('../traitements/page-traitement/traitement-profil.php');
     <?php require ('require/header.php'); ?>         
         <main>
             <section class="section-profil">
-                <h1>Profil</h1>
+                <h2>Vos informations</h2>
                 <p>
                 <?php 
                 if(isset($_GET['msg']) && $_GET['msg']=='modifreussie') {

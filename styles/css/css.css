@@ -16,13 +16,17 @@ body {
     font-size: 1.2em;
     background-color: #f2f0ed;
 }
+h1 {
+    font-size: 3em;
+    color: ivory;
+
+}
 h1, h2 {
     margin: 0;
     padding: 0.5em;
     font-family: 'Cormorant Garamond', serif;
     font-size: 2em;
     text-align: center;
-    color: #496477;
 }
 a {
 	text-decoration : none;
@@ -471,7 +475,7 @@ td:nth-child(7), td:nth-child(8) {
     }
     .section-reservation form {
         position: absolute;
-        top: 2rem;
+        top: 5rem;
         right: 11rem;
         padding-top : 0.5em; 
         padding-bottom : 0.5em;   

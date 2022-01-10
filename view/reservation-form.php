@@ -31,7 +31,7 @@ require ('../traitements/page-traitement/bdd.php');
                 <p>Réservation réussie.</p> <?php
                 } ?>
                 <form class="form" action="../traitements/form-traitement/form-reservation.php" method="post">
-                    <h1>Formulaire de réservation</h1>
+                    <h1>Réservation</h1>
                     <label for="titre">Titre</label>
                     <input type="text" id="titre" name="titre" maxlength="80">
                     <?php 

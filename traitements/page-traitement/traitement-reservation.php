@@ -16,5 +16,4 @@ $res_id = $_GET['id'];
 $req = mysqli_query($bdd, "SELECT id_utilisateur, login, titre, description, debut, fin FROM reservations
 INNER JOIN utilisateurs ON reservations.id_utilisateur = utilisateurs.id WHERE reservations.id = $res_id");
 // Résultat de la requête.
-$res = mysqli_fetch_all($req, MYSQLI_ASSOC); 
-?>
+$res = mysqli_fetch_all($req, MYSQLI_ASSOC);

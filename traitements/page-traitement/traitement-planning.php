@@ -10,12 +10,12 @@ if(isset($_GET['week'])) {
         $req = mysqli_query($bdd, "SELECT debut, fin, titre, login, reservations.id FROM reservations
         INNER JOIN utilisateurs ON reservations.id_utilisateur = utilisateurs.id WHERE WEEK(debut)=WEEK(NOW() + INTERVAL $week WEEK)");
     }
-    elseif($week<0) {
+    if($week<0) {
         $newweek = substr($week,1);
         $req = mysqli_query($bdd, "SELECT debut, fin, titre, login, reservations.id FROM reservations
         INNER JOIN utilisateurs ON reservations.id_utilisateur = utilisateurs.id WHERE WEEK(debut)=WEEK(NOW() - INTERVAL $newweek WEEK)");
     }
-    else {
+    elseif($week==0) {
         $req = mysqli_query($bdd, "SELECT debut, fin, titre, login, reservations.id FROM reservations
         INNER JOIN utilisateurs ON reservations.id_utilisateur = utilisateurs.id WHERE WEEK(debut)=WEEK(NOW())");
     }  

@@ -1,5 +1,6 @@
 <?php 
 require ('../traitements/page-traitement/bdd.php'); 
+require ('../traitements/page-traitement/traitement-header.php'); 
 ?>
 <header>
     <a class="logo" href="accueil.php"><span>Luxury</span><span>Meeting Room</span></a>
@@ -29,8 +30,9 @@ require ('../traitements/page-traitement/bdd.php');
     <?php 
     if(isset($_SESSION['login'])) { ?>
     <p class="msg-connect">Bonjour <span><?php echo $_SESSION['login'];?></span>, vous êtes connectés !</p>
-    <?php }?>
-
+    <?php }
+    
+    if($url==$url_accueil) { ?>
     <div class="sect-header">
         <p>Salle équipée pour réunion ou formation.</p>
         <p>Accedebant enim eius asperitati, ubi inminuta vel laesa amplitudo 
@@ -38,5 +40,36 @@ require ('../traitements/page-traitement/bdd.php');
         cruentae blanditiae exaggerantium incidentia et dolere inpendio 
         simulantium.</p>
     </div>
+    <?php } 
+    elseif($url==$url_inscription) { ?>
+        <div class="sect-header">
+            <h1>Inscription</h1>    
+        </div>
+    <?php } 
+    elseif($url==$url_connexion) { ?>
+        <div class="sect-header">
+            <h1>Connexion</h1>    
+        </div>
+    <?php } 
+    elseif($url==$url_profil) { ?>
+        <div class="sect-header">
+            <h1>Profil</h1>    
+        </div>
+    <?php }  
+    elseif($url==$url_planning) { ?>
+        <div class="sect-header">
+            <h1>Planning</h1>    
+        </div>
+    <?php } 
+    elseif($url==$url_reservation_form) { ?>
+        <div class="sect-header">
+            <h1>Formulaire de réservation</h1>    
+        </div>
+    <?php }
+    elseif($url==$url_reservation) { ?>
+        <div class="sect-header">
+            <h1>Réservation</h1>    
+        </div>
+    <?php } ?>
 </header>
         

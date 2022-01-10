@@ -31,7 +31,7 @@ require ('../traitements/page-traitement/bdd.php');
             <section class="section-connexion">
             <img src="../assets/img/connexion.jpg" alt="Image de bureau pour la page connexion">
                 <form class="form" action="../traitements/form-traitement/form-connexion.php" method="post">
-                    <h1>Connexion</h1>
+                    <h2>Connectez-vous</h2>
                     <label for="login">Login</label>
                     <input type="text" id="login" name="login">
                     <?php 

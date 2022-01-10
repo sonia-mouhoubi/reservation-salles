@@ -23,7 +23,7 @@ require ('../traitements/page-traitement/traitement-planning.php');
     <?php require ('require/header.php'); ?>         
         <main>
             <section class="section-planning">
-                <h1>Planning</h1>
+                <h2>Planning de réservation</h2>
                 <?php 
                 if(isset($_GET['week'])) {
                     $week = $_GET['week'];
@@ -41,29 +41,38 @@ require ('../traitements/page-traitement/traitement-planning.php');
                             <th></th>
                         <?php 
                         if(isset($_GET['week'])){
-                            $test = new DateTime("monday $week weeks");
-                            echo "<th>Lundi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("tuesday $week weeks");
-                            echo "<th>Mardi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("wednesday $week weeks");
-                            echo "<th>Mercredi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("thursday $week weeks");
-                            echo "<th>Jeudi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("friday $week weeks");
-                            echo "<th>Vendredi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("saturday $week weeks");
-                            echo "<th>Samedi<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
-                            $test = new DateTime("sunday $week weeks");
-                            echo "<th>Dimanche<br>".date("d/m/Y", $test->getTimeStamp())."</th>";
+                            $date = new DateTime("mon this week $week weeks");
+                            echo "<th>Lundi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("tue this week $week weeks");
+                            echo "<th>Mardi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("wed this week $week weeks");
+                            echo "<th>Mercredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("thu this week $week weeks");
+                            echo "<th>Jeudi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("fri this week $week weeks");
+                            echo "<th>Vendredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("sat this week $week week");
+                            echo "<th>Samedi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("sun this week $week weeks");
+                            echo "<th>Dimanche<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
                         }
                         else {
-                            echo "<th>Lundi</th>";
-                            echo "<th>Mardi</th>";
-                            echo "<th>Mercredi</th>";
-                            echo "<th>Jeudi</th>";
-                            echo "<th>Vendredi</th>";
-                            echo "<th>Samedi</th>";
-                            echo "<th>Dimanche</th>";
+                            $week = 0;
+                            $date = new DateTime("mon this week $week weeks");
+                            echo "<th>Lundi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("tue this week $week weeks");
+                            echo "<th>Mardi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("wed this week $week weeks");
+                            echo "<th>Mercredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("thu this week $week weeks");
+                            echo "<th>Jeudi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("fri this week $week weeks");
+                            echo "<th>Vendredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("sat this week $week week");
+                            echo "<th>Samedi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            $date = new DateTime("sun this week $week weeks");
+                            echo "<th>Dimanche<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                        
                         }?>     
                         </tr>
                     </thead>
