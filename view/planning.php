@@ -42,37 +42,36 @@ require ('../traitements/page-traitement/traitement-planning.php');
                         <?php 
                         if(isset($_GET['week'])){
                             $date = new DateTime("mon this week $week weeks");
-                            echo "<th>Lundi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Lundi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("tue this week $week weeks");
-                            echo "<th>Mardi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Mardi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("wed this week $week weeks");
-                            echo "<th>Mercredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Mercredi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("thu this week $week weeks");
-                            echo "<th>Jeudi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Jeudi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("fri this week $week weeks");
-                            echo "<th>Vendredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Vendredi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("sat this week $week week");
-                            echo "<th>Samedi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Samedi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("sun this week $week weeks");
-                            echo "<th>Dimanche<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Dimanche<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                         }
                         else {
                             $week = 0;
                             $date = new DateTime("mon this week $week weeks");
-                            echo "<th>Lundi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Lundi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("tue this week $week weeks");
-                            echo "<th>Mardi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Mardi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("wed this week $week weeks");
-                            echo "<th>Mercredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Mercredi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("thu this week $week weeks");
-                            echo "<th>Jeudi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Jeudi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("fri this week $week weeks");
-                            echo "<th>Vendredi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Vendredi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("sat this week $week week");
-                            echo "<th>Samedi<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
+                            echo "<th>Samedi<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                             $date = new DateTime("sun this week $week weeks");
-                            echo "<th>Dimanche<br>".date("Y-m-d", $date->getTimeStamp())."</th>";
-                        
+                            echo "<th>Dimanche<br>".date("d/m/Y", $date->getTimeStamp())."</th>";
                         }?>     
                         </tr>
                     </thead>

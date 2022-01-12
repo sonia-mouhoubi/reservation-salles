@@ -20,12 +20,8 @@ session_start();
     <body>
         <?php require ('require/header.php'); ?>         
         <main class="main-accueil">
-            <?php 
-            if(isset($_GET['msg']) && $_GET['msg']=='connectreussie') {
-            ?> <p>Connexion réussie.</p> <?php
-            } ?>
             <section class="description-accueil">
-                <h1>RESERVATION DE SALLES</h1>
+                <h2>RESERVATION DE SALLES</h2>
                 <p>Alios autem dicere aiunt multo etiam inhumanius (quem locum breviter paulo 
                 ante perstrinxi) praesidii adiumentique causa, non benevolentiae neque caritatis,
                 si principis periclitetur vita, a cuius salute velut filo pendere statum orbis 

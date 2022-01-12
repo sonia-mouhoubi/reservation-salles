@@ -55,6 +55,18 @@ require ('../traitements/page-traitement/bdd.php');
                     <?php } 
                     if(isset($_GET['err']) && $_GET['err']=='errorheure') {?> 
                     <p>Veuillez choisir un créneau compris entre 8h et 18h.</p> 
+                    <?php }
+                    if(isset($_GET['err']) && $_GET['err']=='errheurefixe') {?> 
+                        <p>Les réservation ont une durée d'une heure fixe.</p> 
+                    <?php }
+                    if(isset($_GET['err']) && $_GET['err']=='errheuredebut') {?> 
+                        <p>ERREUR FIN</p> 
+                    <?php }
+                     if(isset($_GET['err']) && $_GET['err']=='inf1h') {?> 
+                        <p>Veuillez choisir une heure de fin supérieure à celle du début.</p> 
+                    <?php }
+                    if(isset($_GET['err']) && $_GET['err']=='dateinf') {?> 
+                        <p>Veuillez choisir une date postérieure à celle sélectionnée.</p> 
                     <?php }?>
                     <label for="datefin">Date de fin</label>
                     <input type="datetime-local" id="datefin" name="datefin" min='2021-12-14 08:00:00' max='2022-12-31 18:00:00' step="3600">

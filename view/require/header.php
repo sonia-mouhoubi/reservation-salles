@@ -28,10 +28,15 @@ require ('../traitements/page-traitement/traitement-header.php');
         <?php }?>
     </nav> 
     <?php 
+    if(isset($_GET['msg']) && $_GET['msg']=='insreussie') {
+    ?> <p>Inscription réussie.</p> <?php
+    }
+    if(isset($_GET['msg']) && $_GET['msg']=='connectreussie') {
+    ?> <p>Connexion réussie.</p> <?php
+    } 
     if(isset($_SESSION['login'])) { ?>
     <p class="msg-connect">Bonjour <span><?php echo $_SESSION['login'];?></span>, vous êtes connectés !</p>
     <?php }
-    
     if($url==$url_accueil) { ?>
     <div class="sect-header">
         <p>Salle équipée pour réunion ou formation.</p>

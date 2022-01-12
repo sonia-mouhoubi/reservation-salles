@@ -14,9 +14,11 @@ if(isset($_SESSION['login'])) {
         $password = valid_donnees($_POST["password"]);
         $password2 = valid_donnees($_POST["password2"]);
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
         // Requete pour savoir s'il y a bien un login existant.
         $req2 = mysqli_query($bdd, "SELECT * FROM utilisateurs WHERE login = '$login'");
         $res2 = mysqli_fetch_all($req2, MYSQLI_ASSOC);
+        
         // Si login n'est pas vide.
         if(!empty($login) && $session_login != $login) {
             if(mysqli_num_rows($req2)) {
@@ -32,7 +34,7 @@ if(isset($_SESSION['login'])) {
             header("Location: ../../view/profil.php?err=emptylogin");
             die();
         }
-        if(!empty($login) && $session_login == $login && empty($password)) {
+        if(!empty($login) && $session_login == $login && empty($password) && empty($password2) && $password == $password2) {
             header("Location: ../../view/profil.php?msg=modifreussie");  
             die();
         }

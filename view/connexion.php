@@ -22,12 +22,6 @@ require ('../traitements/page-traitement/bdd.php');
     <body>
     <?php require ('require/header.php'); ?>         
         <main>
-            <span>
-            <?php 
-            if(isset($_GET['msg']) && $_GET['msg']=='insreussie') {
-            ?> <p>Inscription réussie.</p> <?php
-            } ?>
-            </span>
             <section class="section-connexion">
             <img src="../assets/img/connexion.jpg" alt="Image de bureau pour la page connexion">
                 <form class="form" action="../traitements/form-traitement/form-connexion.php" method="post">
